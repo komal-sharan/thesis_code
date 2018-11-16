@@ -1,16 +1,16 @@
 # thesis_code
 
-data preprocessing:
-1)run data/vqa_preprocessing.py
-2)run prepro.py
-3)run prepro_img.py
+# data preprocessing:
+1)run data/vqa_preprocessing.py\
+2)run prepro.py\
+3)run prepro_img.py\
 
 
-#Base Model training file:
+# Base Model training file:
 
 san_lstm_att.py
 
-#Multitask model training file:
+# Multitask model training file:
 
 train/san_multitask.py
 
