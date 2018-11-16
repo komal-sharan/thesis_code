@@ -1,0 +1,56 @@
+%matplotlib inline
+import matplotlib.pyplot as plt
+import pickle
+b6=open('visual_accuracy_old_6_today.pkl','rb')
+bold6=pickle.load(b6,encoding='latin1')
+b7=open('visual_accuracy_old_7_today.pkl','rb')
+bold7=pickle.load(b7,encoding='latin1')
+b8=open('visual_accuracy_old_8_today.pkl','rb')
+bold8=pickle.load(b8,encoding='latin1')
+b9=open('visual_accuracy_old_9_today.pkl','rb')
+bold9=pickle.load(b9,encoding='latin1')
+b10=open('visual_accuracy_old_10_today.pkl','rb')
+bold10=pickle.load(b10,encoding='latin1')
+lisOld=[]
+
+lisOld.append(sum(bold6)/len(bold6))
+lisOld.append(sum(bold7)/len(bold7))
+lisOld.append(sum(bold8)/len(bold8))
+lisOld.append(sum(bold9)/len(bold9))
+lisOld.append(sum(bold10)/len(bold10))
+
+
+n6=open('visual_accuracy_new_6_today.pkl','rb')
+new6=pickle.load(n6,encoding='latin1')
+n7=open('visual_accuracy_new_7_today.pkl','rb')
+new7=pickle.load(n7,encoding='latin1')
+n8=open('visual_accuracy_new_8_today.pkl','rb')
+new8=pickle.load(n8,encoding='latin1')
+n9=open('visual_accuracy_new_9_today.pkl','rb')
+new9=pickle.load(n9,encoding='latin1')
+n10=open('visual_accuracy_new_10_today.pkl','rb')
+new10=pickle.load(n10,encoding='latin1')
+
+lisNew=[]
+
+lisNew.append(sum(new6)/len(new6))
+lisNew.append(sum(new7)/len(new7))
+lisNew.append(sum(new8)/len(new8))
+lisNew.append(sum(new9)/len(new9))
+lisNew.append(sum(new10)/len(new10))
+
+
+#plt.bar(range(len(lisNew)),lisNew , align='center')
+
+#plt.bar(range(len(lisOld)),lisOld , align='center')
+newrange=[]
+for x in range(len(lisOld)):
+    newrange.append(x+0.3)
+
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.bar(range(len(lisNew)),lisNew,0.3,color='b',label='new')
+ax.bar(newrange,lisOld,0.3,color='r',label='old')
+ax.set_xlabel('Intersection over Union')
+ax.set_ylabel('Accuracy in percentage')
+plt.show()
