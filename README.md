@@ -15,9 +15,8 @@ san_lstm_att.py
 train/san_multitask.py
 
 
-Testing
 
-# for quantitative testing
+# quantitative testing
 run san_for_test.py
 
 run s2i.py
@@ -28,7 +27,7 @@ run pythonEvalDemo.py
 
 To visualize :
 
-# for qualitative testing 
+# qualitative testing 
 
 run visualAttentionTestBase.py
 run visualAttentionTestnew.py
