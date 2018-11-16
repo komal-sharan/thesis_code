@@ -6,18 +6,18 @@ data preprocessing:
 3)run prepro_img.py
 
 
-Base Model training file:
+#Base Model training file:
 
 san_lstm_att.py
 
-Multitask model training file:
+#Multitask model training file:
 
 train/san_multitask.py
 
 
 Testing
 
-# for quantitative
+# for quantitative testing
 run san_for_test.py
 
 run s2i.py
@@ -28,7 +28,7 @@ run pythonEvalDemo.py
 
 To visualize :
 
-# for qualitative
+# for qualitative testing 
 
 run visualAttentionTestBase.py
 run visualAttentionTestnew.py
